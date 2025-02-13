@@ -12,6 +12,11 @@ window.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+window.addEventListener("click", function() {
+    let music = document.getElementById("backgroundMusic");
+    music.play().catch(error => console.log("Auto-play blocked by browser"));
+}, { once: true }); // Ensures it only triggers once
+
 function createHeart() {
     const heart = document.createElement("div");
     heart.classList.add("heart");
