@@ -50,7 +50,7 @@ let stopGrowth = false;
 document.getElementById("yesButton").addEventListener("click", function() {
     document.getElementById("valentineImage").src = "./funny-yes.gif"; // Change image
     document.getElementById("message").innerText = "Yay! I knew you'd say yes! ❤️"; // Update message
-    document.getElementById("message-2").innerText = "EXCITED FOR FRIDAY !!! (if it doenst snow lol)"; // Update message
+    document.getElementById("message-2").innerText = "EXCITED FOR FRIDAY !!! (if it doesn't snow lol)"; // Update message
 
 // hide button after clicking yes
     document.getElementById("yesButton").style.display = "none";
