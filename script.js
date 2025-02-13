@@ -43,7 +43,7 @@ let stopGrowth = false;
 
 // When "Yes" is clicked, change image to happy cat
 document.getElementById("yesButton").addEventListener("click", function() {
-    document.getElementById("valentineImage").src = "funny-yes.gif"; // Change image
+    document.getElementById("valentineImage").src = "./funny-yes.gif"; // Change image
     document.getElementById("message").innerText = "Yay! I knew you'd say yes! ❤️"; // Update message
     document.getElementById("message-2").innerText = "EXCITED FOR FRIDAY !!! (if it doenst snow lol)"; // Update message
 
@@ -73,7 +73,7 @@ document.getElementById("noButton").addEventListener("click", function() {
 
     // After 3 clicks, stop "Yes" from growing and make it wiggle
     if (noClicks >= 3) {
-        document.getElementById("valentineImage").src = "gato-triste.jpeg"; // Change to sad cat
+        document.getElementById("valentineImage").src = "./gato-triste.jpeg"; // Change to sad cat
         document.getElementById("message").innerText = "Oh no...PLEASE? 😢";
         stopGrowth = true; // Stop "Yes" from increasing in size
         document.getElementById("yesButton").classList.add("wiggle"); // Start wiggling
