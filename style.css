@@ -1,0 +1,105 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a cute background color */
+body {
+    background-color: #fadde3; /* Light pink */
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Style for the main heading */
+h1 {
+    color: #ff4a6e;
+    margin-top: 50px;
+}
+
+
+/* Buttons */
+button {
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin: 5px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+#yesButton {
+    background-color: #5aa27f;
+}
+
+#yesButton:hover {
+    background-color: #90bba6;
+}
+
+#noButton {
+    background-color: #ff4a6e;
+}
+
+#noButton:hover {
+    background-color: #ff749c;
+}
+
+#noButton, #yesButton {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Images */
+#valentineImage {
+    display: block; /* Makes it a block element */
+    margin:  25px auto; /* Centers it horizontally and adds padding top and bottom */
+    width: 300px; /* Adjust image size */
+}
+
+/* 1️⃣ Heart container: Full screen, behind everything */
+.heart-container {
+    position: fixed;  /* Fixed position makes it stay in place */
+    top: 0;
+    left: 0;
+    width: 100%;  /* Covers the entire screen */
+    height: 100%;
+    pointer-events: none;  /* Prevents hearts from blocking clicks */
+    z-index: -1;  /* Puts hearts behind all other content */
+}
+
+/* 2️⃣ Individual floating hearts */
+.heart {
+    position: absolute;  /* Allows free positioning anywhere on screen */
+    bottom: 0;  /* Start at the bottom of the page */
+    font-size: 24px;  /* Default heart size */
+    color: red;  /* Default heart color */
+    animation: float 4s linear infinite;  /* Apply animation */
+}
+
+/* Animation: Floating effect and Sway */
+@keyframes float {
+    0% {
+        transform: translateX(0) translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(10px) translateY(-50vh); /* Sway right */
+    }
+    100% {
+        transform: translateX(-10px) translateY(-100vh); /* Sway left */
+        opacity: 0;
+    }
+}
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.wiggle {
+    animation: wiggle 0.2s infinite; /* Wiggle effect */
+}
